@@ -2,13 +2,15 @@ import { useState, useEffect } from "react";
 import { Navbar, Nav, Container } from "react-bootstrap";
 import logo from '../assets/img/logo.jpg';
 import navIcon1 from '../assets/img/nav-icon1.svg';
-import navIcon2 from '../assets/img/nav-icon2.svg';
-import navIcon3 from '../assets/img/nav-icon3.svg';
+import navIcon2 from '../assets/img/nav-icon2.png';
 import { HashLink } from 'react-router-hash-link';
 import googlecloud from '../assets/img/googlecloud.svg';
+import navIcon3 from '../assets/img/nav-icon4.png';
+import navIcon4 from '../assets/img/nav-icon3.png';
 import {
   BrowserRouter as Router
 } from "react-router-dom";
+import resume from '../assets/Atharv_More_Resume.pdf';
 
 export const NavBar = () => {
 
@@ -39,33 +41,34 @@ export const NavBar = () => {
         <Container>
           <Navbar.Brand href="/">
             <img
-        src={logo}
-        alt="Logo"
-        style={{
-          borderRadius: "50%",
-          border: "2px solid white",
-          width: "80px",  // Adjust size as needed
-          height: "80px",
-          objectFit: "cover"
-        }}
-      />
+              src={logo}
+              alt="Logo"
+              style={{
+                borderRadius: "50%",
+                border: "2px solid white",
+                width: "80px",  // Adjust size as needed
+                height: "80px",
+                objectFit: "cover"
+              }}
+            />
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav">
             <span className="navbar-toggler-icon"></span>
           </Navbar.Toggle>
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="ms-auto">
-              <Nav.Link href="#home" className={activeLink === 'home' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('home')}>Home</Nav.Link>
-              <Nav.Link href="#skills" className={activeLink === 'skills' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('skills')}>Skills</Nav.Link>
               <Nav.Link href="#experience" className={activeLink === 'experience' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('experience')}>Experience</Nav.Link>
               <Nav.Link href="#projects" className={activeLink === 'projects' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('projects')}>Projects</Nav.Link>
+              <Nav.Link href="#skills" className={activeLink === 'skills' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('skills')}>Skills</Nav.Link>
+              <Nav.Link href={resume} download="Atharv_More_Resume.pdf" className='navbar-link'>Resume</Nav.Link>
             </Nav>
             <span className="navbar-text">
               <div className="social-icon">
                 <a href="https://www.linkedin.com/in/atharv-more-0498b524b/"><img src={navIcon1} alt="" /></a>
                 <a href="https://x.com/atharvwxyz"><img src={navIcon2} alt="" /></a>
-                <a href="https://www.instagram.com/devs.404/"><img src={navIcon3} alt="" /></a>
+                <a href="https://github.com/iatharvmore"><img src={navIcon3} alt="" style={{ width: "20px", height: "20px" }} /></a>
                 <a href="https://www.cloudskillsboost.google/public_profiles/6bd13164-9f08-490c-a230-ef71fd1c77c7"><img src={googlecloud} alt="" /></a>
+                <a href="https://medium.com/@160324atharvmore"><img src={navIcon4} alt="" style={{ width: "20px", height: "20px" }} /></a>
               </div>
               <HashLink to='#connect'>
                 <button className="vvd"><span>Let’s Connect</span></button>

@@ -8,17 +8,19 @@ import { Projects } from "./components/Projects";
 import { Contact } from "./components/Contact";
 import { Footer } from "./components/Footer";
 import { Experience } from "./components/Exp";
+import { BackToTop } from "./components/BackToTop";
 
 function App() {
   return (
     <div className="App">
       <NavBar />
       <Banner />
-      <Skills />
       <Experience />
       <Projects />
+      <Skills />
       <Contact />
       <Footer />
+      <BackToTop />
     </div>
   );
 }

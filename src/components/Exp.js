@@ -36,8 +36,8 @@ export const Experience = () => {
     <section
       id="experience"
       style={{
-        backgroundColor: "#000",
-        color: "#fff",
+        backgroundColor: "#f8f9fa",
+        color: "#1a1a1a",
         padding: "60px 0",
         textAlign: "center",
       }}
@@ -48,11 +48,11 @@ export const Experience = () => {
           <Row key={index} style={{ marginBottom: "40px", textAlign: "left" }}>
             <Col md={{ span: 8, offset: 2 }}>
               <h4 style={{ fontWeight: "600", marginBottom: "10px" }}>{exp.title}</h4>
-              <p style={{ fontStyle: "italic", color: "#aaa", marginBottom: "15px" }}>{exp.date}</p>
+              <p style={{ fontStyle: "italic", color: "#666", marginBottom: "15px" }}>{exp.date}</p>
               <ul style={{ listStyle: "none", paddingLeft: "0" }}>
                 {exp.points.map((point, idx) => (
                   <li key={idx} style={{ display: "flex", alignItems: "flex-start", marginBottom: "10px" }}>
-                    <FaCheckCircle style={{ color: "#0f0", marginRight: "10px", marginTop: "4px" }} />
+                    <FaCheckCircle style={{ color: "#4A2FBD", marginRight: "10px", marginTop: "4px" }} />
                     <span>{point}</span>
                   </li>
                 ))}

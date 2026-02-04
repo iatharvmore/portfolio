@@ -1,0 +1,30 @@
+{
+    "version": 2,
+    "builds": [
+        {
+            "src": "package.json",
+            "use": "@vercel/static-build",
+            "config": {
+                "distDir": "build"
+            }
+        }
+    ],
+    "routes": [
+        {
+            "src": "/api/(.*)",
+            "dest": "/api/$1"
+        },
+        {
+            "src": "/(.*)",
+            "dest": "/$1"
+        }
+    ],
+    "env": {
+        "EMAIL_USER": "@email_user",
+        "EMAIL_APP_PASSWORD": "@email_app_password",
+        "NOTIFICATION_EMAIL": "@notification_email",
+        "GOOGLE_CLIENT_EMAIL": "@google_client_email",
+        "GOOGLE_PRIVATE_KEY": "@google_private_key",
+        "GOOGLE_SHEET_ID": "@google_sheet_id"
+    }
+}

@@ -4,6 +4,7 @@ import headerImg from "../assets/img/header-img.svg";
 import { ArrowRightCircle } from 'react-bootstrap-icons';
 import 'animate.css';
 import TrackVisibility from 'react-on-screen';
+import { ScrollIndicator } from "./ScrollIndicator";
 
 export const Banner = () => {
   const [loopNum, setLoopNum] = useState(0);
@@ -11,7 +12,7 @@ export const Banner = () => {
   const [text, setText] = useState('');
   const [delta, setDelta] = useState(300 - Math.random() * 100);
   const [index, setIndex] = useState(1);
-  const toRotate = [ "a Computer Engineer", "an AI/ML Engineer" ];
+  const toRotate = ["a Computer Engineer", "an AI/ML Engineer"];
   const period = 2000;
 
   useEffect(() => {
@@ -54,24 +55,29 @@ export const Banner = () => {
           <Col xs={12} md={6} xl={7}>
             <TrackVisibility>
               {({ isVisible }) =>
-              <div className={isVisible ? "animate__animated animate__fadeIn" : ""}>
-                <span className="tagline">Welcome to my Portfolio</span>
-                <h1>{`Hi! I'm Atharv`} <span className="txt-rotate" dataPeriod="1000" data-rotate='[ "Computer Engineer", "AI/ML Engineer"]'><span className="wrap">{text}</span></span></h1>
-                  <p>Computer Engineering student with internship and research experience across AI, NLP, and system support. Worked in technical support resolving 30+ field-level issues. Conducted model evaluation and optimization research as an extern, improving classification accuracy by 15%. Published 2 articles on applied AI and contributed to NLP benchmarking under Cohere for AI. Strong proficiency in distributed systems, scalable architectures, and backend development. Comfortable with Unix/Linux, TCP/IP, CI/CD, and large-scale deployment environments.</p>
-                  <button onClick={() => console.log('connect')}>Let’s Connect <ArrowRightCircle size={25} /></button>
-              </div>}
+                <div className={isVisible ? "animate__animated animate__fadeIn" : ""}>
+                  <span className="tagline">Welcome to my Portfolio</span>
+                  <h1>{`Hi! I'm Atharv`} <span className="txt-rotate" dataPeriod="1000" data-rotate='[ "Computer Engineer", "AI/ML Engineer"]'><span className="wrap">{text}</span></span></h1>
+                  <p>Computer Engineering student with hands-on experience in LLMs, coding agents, and generative AI using frameworks such as
+                    LangChain, LangGraph, TensorFlow, and PyTorch. Experienced in building, experimenting with, and deploying AI systems end-to-end,
+                    with a strong foundation in machine learning, problem-solving, and real-world application development...</p>
+                  <button onClick={() => console.log('connect')}>
+                    <span>Let's Connect <ArrowRightCircle size={25} /></span>
+                  </button>
+                </div>}
             </TrackVisibility>
           </Col>
           <Col xs={12} md={6} xl={5}>
             <TrackVisibility>
               {({ isVisible }) =>
                 <div className={isVisible ? "animate__animated animate__zoomIn" : ""}>
-                  <img src={headerImg} alt="Header Img"/>
+                  <img src={headerImg} alt="Header Img" />
                 </div>}
             </TrackVisibility>
           </Col>
         </Row>
       </Container>
+      <ScrollIndicator />
     </section>
   )
 }

@@ -28,18 +28,19 @@ export const Projects = () => {
     color: "inherit",
     transition: "transform 0.3s ease",
     display: "block",
-    border: "1px solidrgb(223, 181, 247)",
+    border: "2px solid #e0e0e0",
     borderRadius: "12px",
     padding: "20px",
     height: "100%",
     backgroundColor: "#ffffff",
-    boxShadow: "0 4px 20px rgba(0, 0, 0, 0.06)"
+    boxShadow: "0 4px 20px rgba(0, 0, 0, 0.08)"
   };
 
   const hoverStyle = {
     transform: "translateY(-5px)",
     backgroundColor: "#f8f9fa",
-    boxShadow: "0 6px 25px rgba(0,0,0,0.1)"
+    boxShadow: "0 6px 25px rgba(170, 54, 124, 0.15)",
+    borderColor: "#AA367C"
   };
 
   const textCardStyle = {
@@ -47,7 +48,7 @@ export const Projects = () => {
   };
 
   const titleStyle = {
-    color: "#222",
+    color: "#1a1a1a",
     marginBottom: "10px",
     fontWeight: "600",
     textAlign: "center",
@@ -55,15 +56,16 @@ export const Projects = () => {
 
   const descriptionStyle = {
     fontSize: "14px",
-    color: "#444"
+    color: "#666"
   };
 
   const linkStyle = {
     display: "block",
     marginTop: "10px",
     fontSize: "13px",
-    color: "#007bff",
+    color: "#4A2FBD",
     textAlign: "center",
+    fontWeight: "600"
   };
 
   return (
