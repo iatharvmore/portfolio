@@ -1,6 +1,5 @@
 import { useState } from 'react';
 import { Container, Row, Col, Tab, Nav } from 'react-bootstrap';
-import colorSharp from "../assets/img/color-sharp.png";
 
 export const Skills = () => {
   const [activeTab, setActiveTab] = useState('languages');

@@ -35,7 +35,7 @@ export const Contact = () => {
     }
 
     // Phone validation
-    const phoneRegex = /^[\d\s\+\-\(\)]{10,15}$/;
+    const phoneRegex = /^[\d\s+\-()]{10,15}$/;
     if (!formDetails.phone || !phoneRegex.test(formDetails.phone.trim())) {
       newErrors.phone = 'Phone number must be 10-15 digits';
     }
