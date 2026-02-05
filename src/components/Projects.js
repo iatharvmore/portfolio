@@ -8,17 +8,17 @@ export const Projects = () => {
     {
       title: "Customer Satisfaction ML Pipeline",
       description: "Engineered an end-to-end ML system using ZenML and MLflow for analyzing 50k+ reviews. Improved F1-score by 15% with scalable pipeline design and cloud-ready tracking.",
-      githubUrl: "https://github.com/iatharvmore/customer-satisfaction-pipeline"
+      githubUrl: "https://github.com/iatharvmore/Customer_Satisfaction_zenml"
     },
     {
       title: "Healthcare Predictive Platform",
       description: "Built a predictive system integrating 4 ML models to forecast hospital resource demand. Deployed for real-time inference in Unix-based distributed systems, cutting operational cost by 20%.",
-      githubUrl: "https://github.com/iatharvmore/healthcare-predictive-platform"
+      githubUrl: "https://github.com/iatharvmore/Healthcare_Predictlatform"
     },
     {
       title: "NSFW Image Filter (Computer Vision)",
       description: "Developed an 85% accurate model for inappropriate image detection, deployed with real-time alerting and dashboard preview, optimized for low-latency, high-volume inference.",
-      githubUrl: "https://github.com/iatharvmore/nsfw-image-filter"
+      githubUrl: "https://github.com/iatharvmore/NSFW-detector"
     }
   ];
 
